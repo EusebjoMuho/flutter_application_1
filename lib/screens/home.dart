@@ -19,6 +19,8 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/profile'), child: const Text('Profilo')),
             const SizedBox(height: 8),
             ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/search'), child: const Text('Cerca terapeuti')),
+            const SizedBox(height: 8),
+            ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/therapist_profile'), child: const Text('Crea/Modifica profilo terapeuta')),
           ],
         ),
       ),

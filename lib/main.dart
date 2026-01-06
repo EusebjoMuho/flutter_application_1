@@ -27,6 +27,7 @@ class MainApp extends StatelessWidget {
         '/home': (context) => const HomeScreen(),
         '/profile': (context) => const ProfileScreen(),
         '/search': (context) => const TherapistSearchScreen(),
+        '/therapist_profile': (context) => const TherapistProfileEditScreen(),
       },
     );
   }
