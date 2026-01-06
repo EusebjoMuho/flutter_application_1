@@ -50,7 +50,14 @@ class FirestoreRepository {
     if (approach != null) collection = collection.where('approaches', arrayContains: approach);
     if (language != null) collection = collection.where('languages', arrayContains: language);
     final snaps = await collection.limit(50).get();
-    return snaps.docs.map((d) => TherapistProfile.fromJson(d.data())).toList();
+    final List<TherapistProfile> out = [];
+    for (final d in snaps.docs) {
+      final data = d.data();
+      if (data is Map<String, dynamic>) {
+        out.add(TherapistProfile.fromJson(data));
+      }
+    }
+    return out;
   }
 }
 

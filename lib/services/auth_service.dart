@@ -4,12 +4,12 @@ import '../models/user.dart' as app_user;
 import '../repositories/firestore_repository.dart';
 
 class AuthService {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final fb.FirebaseAuth _auth = fb.FirebaseAuth.instance;
   final FirestoreRepository _repo;
 
   AuthService({FirestoreRepository? repo}) : _repo = repo ?? firestoreRepository;
 
-  Stream<User?> authStateChanges() => _auth.authStateChanges();
+  Stream<fb.User?> authStateChanges() => _auth.authStateChanges();
 
   Future<fb.UserCredential> signInWithEmail(String email, String password) async {
     final cred = await _auth.signInWithEmailAndPassword(email: email, password: password);

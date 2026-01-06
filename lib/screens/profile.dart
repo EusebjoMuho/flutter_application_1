@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as fb;
 import '../repositories/firestore_repository.dart';
 import '../models/user.dart';
 
@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Future<void> _loadUser() async {
-    final uid = FirebaseAuth.instance.currentUser?.uid;
+    final uid = fb.FirebaseAuth.instance.currentUser?.uid;
     if (uid == null) {
       setState(() { _loading = false; });
       return;
