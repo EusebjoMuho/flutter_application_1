@@ -16,7 +16,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> _register() async {
     setState(() => _loading = true);
     try {
-      await authService.registerWithEmail(_emailController.text.trim(), _passwordController.text);
+      await authService.registerWithEmail(_emailController.text.trim(), _passwordController.text, name: null, role: 'patient');
       if (!mounted) return;
       Navigator.of(context).pushReplacementNamed('/home');
     } catch (e) {
