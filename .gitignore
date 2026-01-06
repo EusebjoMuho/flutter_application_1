@@ -1,0 +1,23 @@
+﻿# Flutter/Dart
+.dart_tool/
+.packages
+.packages.lock
+.pub/
+/build/
+/ios/Pods/
+.android/
+.android/gradle/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+.packages
+.flutter-plugins
+.generated/
+# local env
+.env
+secrets.json
